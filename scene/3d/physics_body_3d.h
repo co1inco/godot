@@ -521,6 +521,9 @@ public:
 	Object *get_collider_shape(int p_collision_index = 0) const;
 	int get_collider_shape_index(int p_collision_index = 0) const;
 	Vector3 get_collider_velocity(int p_collision_index = 0) const;
+
+	PhysicsBody3D* get_owner() const { return owner; }
+	void set_owner(PhysicsBody3D* new_owner) { this->owner = new_owner; }
 };
 
 class PhysicalBone3D : public PhysicsBody3D {
